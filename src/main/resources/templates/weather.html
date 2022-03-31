@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User Profile</title>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Weather</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/}">Go to Profile Page</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<div>
+    <div class="locationName" align="center">
+        <h1>Weather at <span th:text="${weather.name}"></span>, <span th:text="${weather.region}"></span>, <span th:text="${weather.country}"></span></h1>
+    </div>
+        <div class="temperature" align="center">
+            <h2>Temperature in celsius: <span th:text="${weather.temp_c}"></span> </h2>
+        </div>
+    <div class="condition" align="center">
+        <h2>Condition: <span th:text="${weather.condition}"></span> </h2>
+    </div>
+
+<!--    <div class="temperature" align="center">-->
+<!--        <h2>Temperature in celsius: <span th:text="${weather.temp_c}"></span> </h2>-->
+<!--    </div>-->
+<!--    <div class="temperature" align="center">-->
+<!--        <h2>Temperature in celsius: <span th:text="${weather.temp_c}"></span> </h2>-->
+<!--    </div>-->
+<!--    <div class="temperature" align="center">-->
+<!--        <h2>Temperature in celsius: <span th:text="${weather.temp_c}"></span> </h2>-->
+<!--    </div>-->
+</div>
